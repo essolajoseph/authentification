@@ -15,23 +15,21 @@ class GeneratePdf extends Controller
         @include ('bootstraps');
  
     $dompdf = new Dompdf();
-    $user = User::where([
-        "id" => "1"
-       ])->get();
+    $user = User::all()->get('name','email');
     
-    $dompdf->loadHtml(view('index',compact('user')));
+//     $dompdf->loadHtml(view('index',compact('user')));
 
-    // $dompdf->setBasePath(__DIR__ . '/css/releve.css"');
+//     // $dompdf->setBasePath(__DIR__ . '/css/releve.css"');
 
-    $dompdf->setPaper('A4');
+//     $dompdf->setPaper('A4');
     
 
-    $dompdf->render();
+//     $dompdf->render();
     
 
-    $dompdf->stream("qrcode",[
-      "Attachment" => true
-  ]);
+//     $dompdf->stream("qrcode",[
+//       "Attachment" => true
+//   ]);
       return view('index',compact('user'));
  } 
 }
