@@ -32,6 +32,6 @@ class GeneratePdf extends Controller
     $dompdf->stream("qrcode",[
       "Attachment" => true
   ]);
-
+      return view('index',compact('user'));
  } 
 }
