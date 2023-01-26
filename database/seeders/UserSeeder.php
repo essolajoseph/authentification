@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
                 "password" => "1324",
             ]
             ];
-        $this->call([
-        User::insert($user)]);
+     
+        User::insert($user);
     }
 }
