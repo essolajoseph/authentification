@@ -15,7 +15,7 @@ class GeneratePdf extends Controller
         @include ('bootstraps');
  
     $dompdf = new Dompdf();
-    $user = User::all()->get('name','email');
+    $user = User::get();
     
 //     $dompdf->loadHtml(view('index',compact('user')));
 
