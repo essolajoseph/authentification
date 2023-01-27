@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\GeneratePdf;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ScanController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,5 @@ Route::get('/index',[HomeController::class,'index'])->name('index');
 Route::get('/home',[UserController::class,'home'])->name('home');
 Route::get('/releve1',[HomeController::class,'releve1'])->name('releve1');
 Route::get('/',[HomeController::class,'app'])->name('app');
+Route::get('/scan',[ScanController::class,'store'])->name('scan');
+Route::get('/scan',[ScanController::class,'scanner'])->name('scanner');
