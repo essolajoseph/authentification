@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GeneratePdf;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::resource('users', GeneratePdf::class);
+Route::get('/',[HomeController::class,'home'])->name('home');
