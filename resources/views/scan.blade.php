@@ -12,8 +12,13 @@
     <title>Authentification des documents</title>  
     <style>
        .camera{
-        height: 90%;
-        width:90% ;
+        height: 80%;
+        width:100% ;
+       }
+       .card{
+        align-items: center;
+         height: 400px;
+         width: 400px;
        }
     </style>
 </head>
