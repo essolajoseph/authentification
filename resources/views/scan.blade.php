@@ -13,7 +13,7 @@
     <style>
        .camera{
         height: 250px;
-        width:100% ;
+        width: 250px;
        }
        .card{
         align-items: center; 
