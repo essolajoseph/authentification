@@ -153,7 +153,7 @@
 
     <div class="container">
         <div class="jumbotron">
-            <h1 class="display-4">
+            <!-- <h1 class="display-4">
                 Bootstrap Navbar Sidebar
                 <br>
                 <small>Fixed to Left or Right</small>
@@ -185,7 +185,7 @@
                     <i class="fa fa-arrow-right"></i>
                     Fixed Right
                 </button>
-            </div>
+            </div> -->
             @yield('acceuil')
         </div>
 
