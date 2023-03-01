@@ -17,7 +17,7 @@
        }
        .card{
         align-items: center;
-       
+        height: 200px;
        }
     </style>
 </head>
