@@ -25,5 +25,8 @@ class HomeController extends Controller
     public function acceuil(){
         return view('bienvenu');
     }
+    public function scandoc(){
+        return view('scandoc');
+    }
     
 }

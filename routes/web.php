@@ -28,3 +28,4 @@ Route::get('/releve1',[HomeController::class,'releve1'])->name('releve1');
 Route::get('/scan',[ScanController::class,'store'])->name('scan');
 Route::get('/scan',[ScanController::class,'scanner'])->name('scanner');
 Route::get('/',[HomeController::class,'acceuil'])->name('acceuil');
+Route::get('/scandoc',[HomeController::class,'scandoc'])->name('scandoc');
