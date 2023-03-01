@@ -22,5 +22,8 @@ class HomeController extends Controller
     public function app(){
         return view('layouts.app');
     }
+    public function acceuil(){
+        return view('bienvenu');
+    }
     
 }
