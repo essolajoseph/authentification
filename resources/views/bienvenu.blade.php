@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Authentification des Docuements</title>
     <link rel="stylesheet" id="theme_link" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/materia/bootstrap.min.css" />
-    <link rel="stylesheet" href="{{asset ('./navbar-fixed-right.min.css')}}">
+    <!-- <link rel="stylesheet" href="{{asset ('./navbar-fixed-right.min.css')}}">
     <link rel="stylesheet" href="{{asset ('./navbar-fixed-left.min.css')}}">
-    <link rel="stylesheet" href="{{asset ('./docs.css')}}">
+    <link rel="stylesheet" href="{{asset ('./docs.css')}}"> -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
@@ -86,6 +86,8 @@
             $('#theme_link').attr('href', 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/' + theme + '/bootstrap.min.css');
         }
     </script>
+    <style>body{padding-top:90px}@media (min-width:768px){body{padding-top:0}}@media (min-width:768px){body{margin-right:232px}}.navbar.fixed-right{position:fixed;top:0;left:0;right:0;z-index:1030}@media (min-width:768px){.navbar.fixed-right{bottom:0;width:232px;flex-flow:column nowrap;align-items:flex-start}.navbar.fixed-right .navbar-collapse{flex-grow:0;flex-direction:column;width:100%}.navbar.fixed-right .navbar-collapse .navbar-nav{flex-direction:column;width:100%}.navbar.fixed-right .navbar-collapse .navbar-nav .nav-item{width:100%}.navbar.fixed-right .navbar-collapse .navbar-nav .nav-item .dropdown-menu{top:0}}@media (min-width:768px){.navbar.fixed-right{left:auto}.navbar.fixed-right .navbar-nav .nav-item .dropdown-toggle:after{border-top:.3em solid transparent;border-left:none;border-bottom:.3em solid transparent;border-right:.3em solid;vertical-align:baseline}.navbar.fixed-right .navbar-nav .nav-item .dropdown-menu{left:auto;right:100%}}  </style>
+    <style>body{padding-top:90px}@media (min-width:768px){body{padding-top:0}}@media (min-width:768px){body{margin-left:232px}}.navbar.fixed-left{position:fixed;top:0;left:0;right:0;z-index:1030}@media (min-width:768px){.navbar.fixed-left{bottom:0;width:232px;flex-flow:column nowrap;align-items:flex-start}.navbar.fixed-left .navbar-collapse{flex-grow:0;flex-direction:column;width:100%}.navbar.fixed-left .navbar-collapse .navbar-nav{flex-direction:column;width:100%}.navbar.fixed-left .navbar-collapse .navbar-nav .nav-item{width:100%}.navbar.fixed-left .navbar-collapse .navbar-nav .nav-item .dropdown-menu{top:0}}@media (min-width:768px){.navbar.fixed-left{right:auto}.navbar.fixed-left .navbar-nav .nav-item .dropdown-toggle:after{border-top:.3em solid transparent;border-left:.3em solid;border-bottom:.3em solid transparent;border-right:none;vertical-align:baseline}.navbar.fixed-left .navbar-nav .nav-item .dropdown-menu{left:100%}}</style>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 
