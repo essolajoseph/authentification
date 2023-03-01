@@ -11,7 +11,82 @@
     <link rel="stylesheet" href="{{asset ('./docs.css')}}">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="{{asset ('./docs.js')}}"></script>
+    <script src="{{asset ('./docs.js')}}">
+        var themes = [
+    'cerulean',
+    'cosmo',
+    'cyborg',
+    'darkly',
+    'flatly',
+    'journal',
+    'litera',
+    'lumen',
+    'lux',
+    'materia',
+    'minty',
+    'pulse',
+    'sandstone',
+    'simplex',
+    'sketchy',
+    'slate',
+    'solar',
+    'spacelab',
+    'superhero',
+    'united',
+    'yeti'
+];
+
+$(document).ready(function () {
+    $('[data-class]').click(function () {
+        updateNavbarClass($(this).attr('data-class'));
+    });
+
+    updateNavbarClass('fixed-left');
+
+    themes.forEach(function (theme) {
+        $('#theme_select').append($('<option>', {
+            value: theme,
+            text: theme.charAt(0).toUpperCase() + theme.slice(1),
+            selected: theme === 'materia'
+        }));
+    });
+});
+
+function updateNavbarClass(className) {
+    $('nav')
+        .removeClass(function (index, css) {
+            return (css.match(/(^|\s)fixed-\S+/g) || []).join(' ');
+        })
+        .addClass(className);
+
+    $('[data-class]').removeClass('active').parent('li').removeClass('active');
+    $('[data-class="' + className + '"]').addClass('active').parent('li').addClass('active');
+
+    fixBodyMargin(className);
+}
+
+function fixBodyMargin(className) {
+    if (/fixed-(left|right)/.test(className)) {
+        $('body').removeAttr('style');
+        if (className === 'fixed-right') {
+            $('body').css('marginLeft', 0);
+        } else {
+            $('body').css('marginRight', 0);
+        }
+    } else {
+        $('body').css({
+            "margin-right": 0,
+            "margin-left": 0,
+            "padding-top": '90px'
+        });
+    }
+}
+
+function selectTheme(theme) {
+    $('#theme_link').attr('href', 'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/' + theme + '/bootstrap.min.css');
+}
+
+    </script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 
