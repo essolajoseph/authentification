@@ -10,7 +10,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Authentification des documents</title>  
-        <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <style>
+       .camera{
+        height: 90%;
+        width:90% ;
+       }
+    </style>
 </head>
 
 <body>
@@ -55,12 +60,9 @@
         </div>
         <div class="card bg-white shadow rounded-3 p-3 border-0">
             <div class="wrapper">
-                <div class="scanner">
-
-                </div>
+                <div class="scanner"></div>
                 <video class="camera" id="preview"></video>
             </div>
-
 
 
             <form action="{{ url('/store') }}" method="post" id="form">
