@@ -1,3 +1,8 @@
+@extends('bienvenu')
+
+
+@section('acceuil')
+
 <!doctype html>
 <html lang="en">
 
@@ -176,3 +181,4 @@
 </body>
 
 </html>
+@endsection

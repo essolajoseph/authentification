@@ -108,7 +108,7 @@
                     <a class="nav-link" href="{{route('scanner')}}">Scanner un document</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link">Contact</a>
+                    <a class="nav-link" href="{{route('scandoc')}}">Contact</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
