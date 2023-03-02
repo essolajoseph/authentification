@@ -168,7 +168,9 @@
   <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
     <script>
         function onScanSuccess(decodedText, decodedResult) {
-            console.log(`Code matched = ${decodedText}`, decodedResult);      
+            console.log(`Code matched = ${decodedText}`, decodedResult); 
+            let data=document.getElementById('id_siswa');
+            data.value=decodedText  ;  
         }
          
         function onScanFailure(error) {
