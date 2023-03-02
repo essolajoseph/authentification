@@ -12,7 +12,7 @@ class ScanController extends Controller
           'name' => $request->id_siswa,
         ])->first();
         if($cek){
-         return redirect('/scan')->with('gagal', $cek->matricule);
+         return redirect('/scan')->with('gagal', $cek->name);
         }
         else{
        //  Absen::create(

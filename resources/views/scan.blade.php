@@ -12,8 +12,8 @@
     <title>Authentification des documents</title>
     <style>
         .camera {
-           width: 100%;
-           height: 100%;
+            width: 100%;
+            height: 100%;
         }
 
         .card {
@@ -33,7 +33,7 @@
 
                 <div>
                     {{-- {{session()->get('gagal')}} --}}
-                    @if (session()->get('gagal') == '20R2198')
+                    @if (session()->get('gagal') !== 'biada')
                     <p>Document Authentique</p>
                     <a class="btn btn-success" style="margin-left:20px" href="{{ route('mapping1') }}">Voir le
                         document Authentique</a>
@@ -68,9 +68,9 @@
                 <video class="camera" id="preview"></video>
             </div> -->
 
-         
-                    <div id="reader" class="camera"></div>
-      
+
+            <div id="reader" class="camera"></div>
+
 
 
             <form action="{{ url('/store') }}" method="post" id="form">
@@ -92,7 +92,7 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         var scanner = new Instascan.Scanner({
             video: document.getElementById('preview'),
             scanPeriod: 5,
@@ -133,7 +133,7 @@
             document.getElementById('form').submit();
 
         });
-    </script>
+    </script> -->
     {{-- <div class="btn-group btn-group-toggle mb-5" data-toggle="buttons">
   <label class="btn btn-primary active">
     <input type="radio" name="options" value="1" autocomplete="off" checked> Front Camera
@@ -147,27 +147,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> --}}
-  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
     <script>
         // When scan is successful fucntion will produce data
-function onScanSuccess(qrCodeMessage) {
-  document.getElementById('id_siswa').value=qrCodeMessage;
-  alert(document.getElementById('id_siswa').value);
-}
+        function onScanSuccess(qrCodeMessage) {
+            document.getElementById('id_siswa').value = qrCodeMessage;
+            alert(document.getElementById('id_siswa').value);
+        }
 
-// When scan is unsuccessful fucntion will produce error message
-function onScanError(errorMessage) {
-  // Handle Scan Error
-}
+        // When scan is unsuccessful fucntion will produce error message
+        function onScanError(errorMessage) {
+            // Handle Scan Error
+        }
 
-// Setting up Qr Scanner properties
-var html5QrCodeScanner = new Html5QrcodeScanner("reader", {
-  fps: 10,
-  qrbox: 250
-});
+        // Setting up Qr Scanner properties
+        var html5QrCodeScanner = new Html5QrcodeScanner("reader", {
+            fps: 10,
+            qrbox: 250
+        });
 
-// in
-html5QrCodeScanner.render(onScanSuccess, onScanError);
+        // in
+        html5QrCodeScanner.render(onScanSuccess, onScanError);
     </script>
 
 </body>
