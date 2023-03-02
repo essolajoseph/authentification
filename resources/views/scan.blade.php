@@ -67,12 +67,7 @@
                 <div class="scanner"></div>
                 <video class="camera" id="preview"></video>
             </div> -->
-
-
-            <div id="reader" class="camera"></div>
-
-
-
+            <div id="reader" width="600px"></div>
             <form action="{{ url('/store') }}" method="post" id="form">
                 @csrf
                 <input type="hidden" name="id_siswa" id="id_siswa">
@@ -144,57 +139,31 @@
 </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> --}}
   <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script>
-            // $('#result').val('test');
-            function onScanSuccess(decodedText, decodedResult) {
-                // alert(decodedText);
-                //$('#result').val(decodedText);
-                let id = decodedText;                
-                // html5QrcodeScanner.clear().then(_ => {
-                //     var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-                //     $.ajax({
-                        
-                //         url: "{{ route('scanner') }}",
-                //         type: 'POST',            
-                //         data: {
-                //             _methode : "POST",
-                //             _token: CSRF_TOKEN, 
-                //             qr_code : id
-                //         },            
-                //         success: function (response) { 
-                //             console.log(response);
-                //             if(response.status == 200){
-                //                 alert('berhasil');
-                //             }else{
-                //                 alert('gagal');
-                //             }
-                            
-                //         }
-                //     });   
-                // }).catch(error => {
-                //     alert('something wrong');
-                // });
-                
-            }
- 
-            function onScanFailure(error) {
-            // handle scan failure, usually better to ignore and keep scanning.
-            // for example:
-                // console.warn(`Code scan error = ${error}`);
-            }
- 
-            let html5QrcodeScanner = new Html5QrcodeScanner(
-            "reader",
-            { fps: 10, qrbox: {width: 250, height: 250} },
-            /* verbose= */ false);
-            html5QrcodeScanner.render(onScanSuccess, onScanFailure);
-            </script>
+    <script>
+        function onScanSuccess(decodedText, decodedResult) {
+            console.log(`Code matched = ${decodedText}`, decodedResult);      
+        }
+         
+        function onScanFailure(error) {
 
+            console.warn(`Code scan error = ${error}`);
+        }
+
+        let html5QrcodeScanner = new Html5QrcodeScanner(
+            "reader", {
+                fps: 10,
+                qrbox: {
+                    width: 250,
+                    height: 250
+                }
+            },
+            false);
+        html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+    </script>
 </body>
 
 </html>
