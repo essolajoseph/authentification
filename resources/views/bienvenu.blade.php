@@ -105,7 +105,7 @@
                     <a class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('store')}}">Scanner un document</a>
+                    <a class="nav-link" href="{{route('scan')}}">Scanner un document</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('scandoc')}}">Contact</a>
