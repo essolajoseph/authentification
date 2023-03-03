@@ -7,14 +7,9 @@
 <html lang="en">
 
 <head>
-
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Bootstrap 4 Template with Sidebar Menu</title>
-
-    <!-- CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Authentification des documents</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -22,143 +17,71 @@
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/media-queries.css">
-
-    <!-- Favicon and touch icons -->
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-
 </head>
 
 <body>
 
-    <!-- Wrapper -->
-    <div class="wrapper">
+    <div class="container col-lg-4 py-5">
+        <div>
+            @if (session()->has('gagal'))
+             
+            <p>essola</p>
+                <div class="alert alert-success d-flex align-items-center" role="alert">
 
-        <!-- Sidebar -->
-        <nav class="sidebar">
+                    <i class="bi bi-check-circle red-color" style="color:green;margin-right:20px"></i>
 
-            <!-- close sidebar menu -->
-            <div class="dismiss">
-                <i class="fas fa-arrow-left"></i>
-            </div>
+                    <div>
+                        {{-- {{session()->get('gagal')}} --}}
+                        @if (session()->get('gagal') == 'Mbiada')
+                            <p>Document Authentique</p>
+                            <a class="btn btn-success" style="margin-left:20px" href="{{ route('mapping1') }}">Voir le
+                                document Authentique</a>
+                        @endif
+                        @if (session()->get('gagal') == '19G2521')
+                            <p>Document Authentique</p>
+                            <a class="btn btn-success" style="margin-left:20px" href="{{ route('mapping3') }}">Voir le
+                                document Authentique</a>
+                        @endif
+                        @if (session()->get('gagal') == '20U4660')
+                        <p>Document Authentique</p>
+                        <a class="btn btn-success" style="margin-left:20px" href="{{ route('mapping') }}">Voir le
+                            document Authentique</a>
+                    @endif
+                    </div>
 
-            <div class="logo">
-                <h3><a href="index.html"></a></h3>
-            </div>
+                </div>
 
-            <ul class="list-unstyled menu-elements">
-                <li class="active">
-                    <a class="scroll-link" href="#top-content"><i class="fas fa-home"></i> Home</a>
-                </li>
-                <li>
-                    <a class="scroll-link" href="#section-1"><i class="fas fa-cog"></i> What we do</a>
-                </li>
-                <li>
-                    <a class="scroll-link" href="#section-2"><i class="fas fa-user"></i> About us</a>
-                </li>
-                <li>
-                    <a class="scroll-link" href="#section-5"><i class="fas fa-pencil-alt"></i> Portfolio</a>
-                </li>
-                <li>
-                    <a class="scroll-link" href="#section-6"><i class="fas fa-envelope"></i> Contact us</a>
-                </li>
-                <li>
-                    <a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">
-                        <i class="fas fa-sync"></i>Other sections
-                    </a>
-                    <ul class="collapse list-unstyled" id="otherSections">
-                        <li>
-                            <a class="scroll-link" href="#section-3">Our projects</a>
-                        </li>
-                        <li>
-                            <a class="scroll-link" href="#section-4">We think that...</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-
-            <div class="to-top">
-                <a class="btn btn-primary btn-customized-3" href="#" role="button">
-                    <i class="fas fa-arrow-up"></i> Top
-                </a>
-            </div>
-
-            <div class="dark-light-buttons">
-                <a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
-                <a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
-            </div>
-
-        </nav>
-        <!-- End sidebar -->
-
-        <!-- Dark overlay -->
-        <div class="overlay"></div>
-
-        <!-- Content -->
-        <div class="content">
-
-            <!-- open sidebar menu -->
-            <a class="btn btn-primary btn-customized open-menu" href="#" role="button">
-                <i class="fas fa-align-left"></i> <span>Menu</span>
-            </a>
-
-            <!-- Top content -->
-            <div class="top-content section-container" id="top-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                            <h1 class="wow fadeIn">Scanner votre QR Code <strong></strong></h1>
-                            <div class="description wow fadeInLeft">
-                                <div id="reader" width="600px"></div>
-                            </div>
-                            <div class="buttons wow fadeInUp">
-                                <a class="btn btn-primary btn-customized scroll-link" href="#section-1" role="button">
-                                <i class="fa fa-download"></i> Télécharger
-                                </a>
-                                <a class="btn btn-primary btn-customized-2 scroll-link" href="#section-3" role="button">
-                                    <i class="fa fa-close"></i> Annuler
-                                </a>
-                            </div>
-                          
-                                    <input type="text" name="test" id="test">
-                                    <button type="submit">voir</button>
-                            
-                        </div>
+            @endif
+            @if (session()->has('sucess'))
+                <div class="alert alert-warning d-flex align-items-center" role="alert">
+                    <i class="bi bi-x-circle red-color" style="color:red ;margin-right:20px"></i>
+                    <div>
+                        {{ session()->get('sucess') }}
                     </div>
                 </div>
-            </div>
-
-
-
-
-
-
-
-
-
+            @endif
         </div>
-        <!-- End content -->
+        <div class="card bg-white shadow rounded-3 p-3 border-0">
+         
+            <div id="reader" width="100%"></div>
+            <form action="{{ route('store') }}" method="post" id="form">
+                @csrf
+                <input type="hidden" name="id_siswa" id="id_siswa">
+            </form>
+        </div>
 
     </div>
-    <!-- End wrapper -->
+    </section>
 
-    <!-- Javascript -->
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
-    <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="assets/js/jquery.backstretch.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
-    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> 
+
+  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
     <script>
         function onScanSuccess(decodedText, decodedResult) {
-            console.log(`Code matched = ${decodedText}`, decodedResult);      
+            console.log(`Code matched = ${decodedText}`, decodedResult);
+            document.getElementById('id_siswa').value=decodedText; 
+            alert(decodedText) ;    
         }
          
         function onScanFailure(error) {
@@ -177,8 +100,10 @@
             false);
         html5QrcodeScanner.render(onScanSuccess, onScanFailure);
     </script>
-
 </body>
 
 </html>
+
+
+
 @endsection
