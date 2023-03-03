@@ -24,8 +24,6 @@
     <div class="container col-lg-4 py-5">
         <div>
             @if (session()->has('gagal'))
-             
-            <p>essola</p>
                 <div class="alert alert-success d-flex align-items-center" role="alert">
 
                     <i class="bi bi-check-circle red-color" style="color:green;margin-right:20px"></i>
@@ -104,7 +102,4 @@
 </body>
 
 </html>
-
-
-
 @endsection
