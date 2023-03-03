@@ -55,7 +55,7 @@
                         </span>
                   </a>
                 <div class="nav_list">
-                         <a href="{{route('scanner')}}" class="nav_link ">
+                         <a href="{{route('scan')}}" class="nav_link ">
                                 <i class='bx bx-grid-alt nav_icon'></i> 
                                 <span class="nav_name">Scan Document</span>
                             </a>
