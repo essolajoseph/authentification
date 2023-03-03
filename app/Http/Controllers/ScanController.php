@@ -7,50 +7,30 @@ use Illuminate\Http\Request;
 
 class ScanController extends Controller
 {
-    public function store(Request $request){
-        // $cek= User::where([
-        //   'name' => $request->id_siswa,
-        // ])->first();
-        // if($cek){
-        //  return redirect('/scan')->with('gagal', $cek->matricule);
-        // }
-        // else{
-       //  Absen::create(
-       //   [            
-       //     'id_siswa' => $request->id_siswa,
-       //     'tanggal' => date('Y-m-d'),
-       //   ]
-       //   );
-      //   return redirect('/scan')->with('sucess', 'Document Non Authentique');
-      //  }
-
-      $test=$request->id_siswa;
-      if($test=='Mbiada'){
-        $user=[
-          [
-              "name" => "Mbiada",
-              "email" => "yopam@gmail.com",
-              "password" => "1324",
-          ]
-          ];
    
-        User::insert($user);
-      }
-     }
 
-     public function scanner(Request $request){
-      $test=$request->id_siswa;
-      if($test=='Mbiada'){
+     public function store (Request $request){
+      $cek= User::where([
+        'name' => $request->id_siswa,
+      ])->first();
+      if($cek){
+      
         $user=[
-          [
-              "name" => "Mbiada",
-              "email" => "yopam@gmail.com",
-              "password" => "1324",
-          ]
-          ];
-   
+            'name' =>'essola'.$request->id_siswa,
+            'email' =>'essolajoseph'.$request->id_siswa,
+            'password' =>'essola'.$request->id_siswa,
+        ];
         User::insert($user);
+       return redirect('/scandoc')->with('gagal', $cek->name);
       }
-        return view('scan');
-     }
-}
+      else {
+         return redirect('/scan')->with('sucess', 'Document Non Authentique');
+      }
+     
+   }
+
+   public function scan(){
+    return view('scan');
+   }
+  }
+

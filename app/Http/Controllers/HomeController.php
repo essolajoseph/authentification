@@ -28,5 +28,7 @@ class HomeController extends Controller
     public function scandoc(){
         return view('scandoc');
     }
+
+   
     
 }

@@ -105,7 +105,7 @@
                     <a class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('scanner')}}">Scanner un document</a>
+                    <a class="nav-link" href="{{route('store')}}">Scanner un document</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('scandoc')}}">Contact</a>
@@ -151,46 +151,8 @@
 
     </nav>
 
-    <div class="container">
-       
-            <!-- <h1 class="display-4">
-                Bootstrap Navbar Sidebar
-                <br>
-                <small>Fixed to Left or Right</small>
-            </h1>
-            <p>
-                <strong>
-                    Use classic Bootstrap navbar as sidebar, on left or right side.
-                </strong>
-            </p>
-            <p>
-                <a class="github-button" href="https://github.com/mladenplavsic/bootstrap-navbar-sidebar" data-icon="octicon-star" data-show-count="true" aria-label="Star mladenplavsic/bootstrap-navbar-sidebar on GitHub">Star</a>
-                <a class="github-button" href="https://github.com/mladenplavsic/bootstrap-navbar-sidebar/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork mladenplavsic/bootstrap-navbar-sidebar on GitHub">Fork</a>
-                <a class="github-button" href="https://github.com/mladenplavsic" aria-label="Follow @mladenplavsic on GitHub">Follow @mladenplavsic</a>
-            </p>
-            <p>Same as when using <code>.fixed-top</code> for navbar - add class <code>.fixed-left</code> or <code>.fixed-right</code>
-                where needed.</p>
-            <p>Click buttons below, and appropriate class will be added to example navbar.</p>
-            <div class="btn-group" role="group">
-                <button type="button" data-class="fixed-left" class="btn btn-primary">
-                    <i class="fa fa-arrow-left"></i>
-                    Fixed Left
-                </button>
-                <button type="button" data-class="fixed-top" class="btn btn-primary">
-                    <i class="fa fa-arrow-up"></i>
-                    Fixed Top
-                    <small>(original)</small>
-                </button>
-                <button type="button" data-class="fixed-right" class="btn btn-primary">
-                    <i class="fa fa-arrow-right"></i>
-                    Fixed Right
-                </button>
-            </div> -->
+    <div class="container">  
             @yield('acceuil')
-       
-
-
-
     </div>
 
 </body>
