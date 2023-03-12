@@ -207,7 +207,7 @@
                             <span class="fs-5 fw-bolder bold_part"> Noms et Prénoms: </span>
                             <span class="english_subtitle"> Surname and Name </span>
                         </div>
-                        <div class="form-value ps-4 pt-1 text-uppercase">ESSOLA ESSOLA JOSEPH JULIEN</div>
+                        <div class="form-value ps-4 pt-1 text-uppercase">EZO'O DAVID</div>
                     </div>
                     <div class="d-flex form-item">
                         <div class="d-flex flex-column">
@@ -215,7 +215,7 @@
                             <span class="fs-5 fw-bolder bold_part"> Matricule: </span>
                             <span class="english_subtitle"> Registration N° </span>
                         </div>
-                        <div class="form-value ps-4 pt-1">20V2412</div>
+                        <div class="form-value ps-4 pt-1">20R2198</div>
                     </div>
                 </section>
                 <section class="w-100 d-flex align-items-center justify-content-start">
@@ -224,7 +224,7 @@
                             <span class="fs-5 fw-bolder bold_part"> Né(e) le: </span>
                             <span class="english_subtitle"> Born on </span>
                         </div>
-                        <div class="form-value ps-4 pt-1 text-uppercase">20/05/1999</div>
+                        <div class="form-value ps-4 pt-1 text-uppercase">04/08/2001</div>
                     </div>
                     &nbsp;
                     <div class="d-flex form-item ms-5 ps-5">
@@ -595,7 +595,7 @@
 
                             <?php
                             $type = 'png';
-                            $data = file_get_contents('https://api.qrserver.com/v1/create-qr-code/?data=20V2412&amp;size=100x100');
+                            $data = file_get_contents('https://api.qrserver.com/v1/create-qr-code/?data=20R2198&amp;size=100x100');
                             $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
                             ?>
                             <?php echo '<div class="company-logo">

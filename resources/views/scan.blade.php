@@ -37,7 +37,7 @@
                         @endif
                         @if (session()->get('gagal') == '19G2521')
                             <p>Document Authentique</p>
-                            <a class="btn btn-success" style="margin-left:20px" href="{{ route('mapping3') }}">Voir le
+                            <a class="btn btn-success" style="margin-left:20px" href="{{ route('releve2') }}">Voir le
                                 document Authentique</a>
                         @endif
                         @if (session()->get('gagal') == '20U4660')

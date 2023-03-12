@@ -19,6 +19,9 @@ class HomeController extends Controller
     public function releve1(){
         return view('releves.releve1');
     }
+    public function releve2(){
+        return view('releves.releve2');
+    }
     public function app(){
         return view('layouts.app');
     }

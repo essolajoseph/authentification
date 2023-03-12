@@ -24,6 +24,7 @@ Route::resource('users', GeneratePdf::class);
 Route::get('/index',[HomeController::class,'index'])->name('index');
 Route::get('/home',[UserController::class,'home'])->name('home');
 Route::get('/releve1',[HomeController::class,'releve1'])->name('releve1');
+Route::get('/releve2',[HomeController::class,'releve2'])->name('releve2');
 Route::get('/',[HomeController::class,'acceuil'])->name('acceuil');
 Route::get('/scandoc',[HomeController::class,'scandoc'])->name('scandoc');
 Route::post('/store',[ScanController::class,'store'])->name('store');
