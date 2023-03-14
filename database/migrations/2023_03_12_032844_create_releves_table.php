@@ -11,6 +11,8 @@ return new class extends Migration
      *
      * @return void
      */
+
+     //essola
     public function up()
     {
         Schema::create('releves', function (Blueprint $table) {
