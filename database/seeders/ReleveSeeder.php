@@ -21,5 +21,8 @@ class ReleveSeeder extends Seeder
         Releve::create([
             'chaine'=>'20V2412'
         ]);
+        Releve::create([
+            'chaine'=>'20V3412'
+        ]);
     }
 }
