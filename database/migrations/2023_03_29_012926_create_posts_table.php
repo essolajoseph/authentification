@@ -13,13 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('etudiants', function (Blueprint $table) {
-            $table->string('matricule')->primary();
-            $table->string('nom');
-            $table->string('prenom');
-            $table->date('dateNaissance');
-            $table->string('lieuNaissance');
-            $table->boolean('estNiveau');
+        Schema::create('posts', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->text('description');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('etudiants');
+        Schema::dropIfExists('posts');
     }
 };

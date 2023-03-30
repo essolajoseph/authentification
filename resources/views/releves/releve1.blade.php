@@ -448,7 +448,7 @@
                 </span>
             </section>
             <section class="w-100 d-flex flex-column" style="font-size: 12px">
-            <div class="d-flex">
+              <div class="d-flex">
                     <div><u> Légende: </u></div>
 
                     <div class="d-flex flex-column">

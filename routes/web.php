@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EtudiantController;
 use App\Http\Controllers\GeneratePdf;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ScanController;
@@ -29,4 +30,5 @@ Route::get('/',[HomeController::class,'acceuil'])->name('acceuil');
 Route::get('/scandoc',[HomeController::class,'scandoc'])->name('scandoc');
 Route::post('/store',[ScanController::class,'store'])->name('store');
 Route::get('/scan',[ScanController::class,'scan'])->name('scan');
+Route::get('/test',[EtudiantController::class,'get'])->name('get');
  
