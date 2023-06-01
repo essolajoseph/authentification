@@ -8,6 +8,7 @@
         "php": "^8.0.2",
         "aws/aws-sdk-php": "^3.262",
         "barryvdh/laravel-dompdf": "^2.0",
+        "fruitcake/laravel-cors": "^3.0",
         "guzzlehttp/guzzle": "^7.2",
         "jenssegers/mongodb": "^3.9",
         "ladumor/laravel-pwa": "^0.0.3",

@@ -13,29 +13,13 @@ class EtudiantController extends Controller
             'version' => 'latest',
             'region' => 'us-east-1', // pass your region
             'credentials' => [
-                'key'    => 'AKIAXLYBGGGMXOASXUVI',
-                'secret' => '8pQX/GJX420DrpF4/00xc1x98seqDT/KW1iB1crM'
+                'key'    => 'AKIAUR6GH74TAWWQ2Y6A',
+                'secret' => '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'
             ],
             
         ]);
         
-        // try {
-        //   $result = $textractClient->detectDocumentText([
-        //       'Document' => [
-        //           'Bytes' => file_get_contents(getcwd().'/test2.jpeg'),
-        //       ]
-        //   ]);
-        //   foreach ($result->get('Blocks') as $block) {
-        //       if ($block['BlockType'] != 'WORD') continue;
-               
-        //       echo $block['Text']." ";
-        //   }
-        // } catch (Aws\Textract\Exception\TextractException $e) {
-        //   // output error message if fails
-        //   echo $e->getMessage();
-        // }
-        
-        // The file in this project.
+    
         $filename = "test3.jpeg";
         $file = fopen($filename, "rb");
         $contents = fread($file, filesize($filename));

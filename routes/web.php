@@ -3,7 +3,9 @@
 use App\Http\Controllers\EtudiantController;
 use App\Http\Controllers\GeneratePdf;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ReleveController;
 use App\Http\Controllers\ScanController;
+use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,4 +33,3 @@ Route::get('/scandoc',[HomeController::class,'scandoc'])->name('scandoc');
 Route::post('/store',[ScanController::class,'store'])->name('store');
 Route::get('/scan',[ScanController::class,'scan'])->name('scan');
 Route::get('/test',[EtudiantController::class,'get'])->name('get');
- 
